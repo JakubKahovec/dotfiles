@@ -1,0 +1,149 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+" Source your .vimrc
+source ~/.vimrc
+
+set visualbell
+set noerrorbells
+set belloff=all
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+# Show current mode
+set showmode
+
+""" Search settings
+set nowrapscan " disable wrap searching
+set hlsearch   " highlight searched result
+set incsearch  " increasing search
+set ignorecase " case insensitive searching
+set smartcase  " smart caseSearching (works with ignorecase)
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+""" Define <Leader> and <LocalLeader> for map commands
+let mapleader = ","
+let maplocalleader = ","
+
+""" Define matching words for %
+let b:match_words = '<:>,<tag>:</tag>'
+
+""" Timeout to hide WhichKey popup
+set notimeout
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+" Change parentheses
+Plug 'tpope/vim-surround'
+" Extended matching
+Plug 'vim-matchit'
+" Displays available keybinding
+set which-key
+
+
+"" Map keys
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+
+" Git
+nmap <leader>ga <Action>(Annotate)
+nmap <leader>gb <Action>(Git.Branches)
+nmap <leader>gd <Action>(GitToolBox.BlameDetails)
+nmap <Leader>gc <Action>(Compare.SameVersion)
+nmap <Leader>gr <Action>(ChangesView.Revert)
+nmap <Leader>gp <Action>(Vcs.Push)
+
+" Run
+nmap <leader>rr <Action>(Run)
+nmap <leader>rc <Action>(RunClass)
+nmap <leader>rm <Action>(ChooseRunConfiguration)
+
+" File structure
+nmap <leader>fs <Action>(FileStructurePopup)
+nmap <leader>as <Action>(ActivateStructureToolWindow)
+
+" Select open file in File Explorer
+nmap <leader>sf <Action>(SelectInProjectView)
+
+" Type info
+nmap <leader>td <Action>(QuickTypeDefinition)
+nmap <leader>ti <Action>(ExpressionTypeInfo)
+nmap <leader>th <Action>(QuickJavaDoc)
+nmap <leader>tp <Action>(ParameterInfo)
+
+" Reformat code
+vmap = <Action>(ReformatCode)
+
+" Go to block start/end
+nmap [m  <Action>(EditorCodeBlockStart)
+nmap [M  <Action>(EditorCodeBlockEnd)
+
+" Next <something>
+nmap <leader>ne <Action>(GotoNextError)
+nmap <leader>no <Action>(NextOccurence)
+nmap <leader>nm <Action>(MethodDown)
+nmap <leader>nu <Action>(GotoNextElementUnderCaretUsage)
+nmap <leader>nc <Action>(VcsShowNextChangeMarker)
+
+" Previous <something>
+nmap <leader>pe <Action>(GotoPreviousError)
+nmap <leader>po <Action>(PreviousOccurence)
+nmap <leader>pm <Action>(MethodUp)
+nmap <leader>pu <Action>(GotoPrevElementUnderCaretUsage)
+nmap <leader>pc <Action>(VcsShowPrevChangeMarker)
+
+" Terminal
+nmap <leader>at <Action>(ActivateTerminalToolWindow)
+nmap <leader>ot <Action>(Terminal.OpenInTerminal)
+
+" Show intent actions
+nmap <leader>ia <Action>(ShowIntentionActions)
+
+" Find usages
+nmap <leader>fu <Action>(FindUsages)
+nmap <leader>su <Action>(ShowUsages)
+
+" Recent
+nmap <leader>rf <Action>(RecentFiles)
+nmap <leader>rl <Action>(RecentLocations)
+
+" Easier mapping for the previous file
+nnoremap <Leader>. <c-6>
+
+" Call hierarchy
+nmap <leader>ch <Action>(CallHierarchy)
+
+" Close <something>
+nmap <leader>ca <Action>(CloseAllEditorsButActive)
+
+" Show context info
+nmap <leader>ci <Action>(EditorContextInfo)
+
+" Enable tracking of actions IDs in IdeaVim
+nmap <leader>iv <Action>(VimFindActionIdAction)
+
+" Select word
+nmap vv <Action>(EditorSelectWord)
+
+" Check for update
+nmap <leader>cu <Action>(CheckForUpdate)
+
+" Goto
+nmap <leader>jf <Action>(GotoFile)
+nmap <leader>js <Action>(GotoSymbol)
+nmap <leader>jc <Action>(GotoClass)
+nmap gi <Action>(GotoImplementation)
+
+" Database
+nmap <leader>ad <Action>(ActivateDatabaseToolWindow)

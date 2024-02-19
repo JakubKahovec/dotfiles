@@ -1,0 +1,14 @@
+package fonts
+package foreign-env
+package https://github.com/IlanCosman/tide
+package https://github.com/PatrickF1/fzf.fish
+package https://github.com/dgrant/fish-autovenv.git
+package https://github.com/edc/bass
+package https://github.com/fabioantunes/fish-nvm
+package https://github.com/fishgretel/terminal_notifier
+package https://github.com/franciscolourenco/done
+package nvm
+package rustup
+theme bobthefish
+theme default
+theme gitstatus
