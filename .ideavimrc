@@ -61,13 +61,15 @@ nmap <leader>ga <Action>(Annotate)
 nmap <leader>gb <Action>(Git.Branches)
 nmap <leader>gd <Action>(GitToolBox.BlameDetails)
 nmap <Leader>gc <Action>(Compare.SameVersion)
-nmap <Leader>gr <Action>(ChangesView.Revert)
+" nmap <Leader>gr <Action>(ChangesView.Revert)
+nmap <Leader>gr <Action>(Vcs.RollbackChangedLines)
 nmap <Leader>gp <Action>(Vcs.Push)
 
 " Run
 nmap <leader>rr <Action>(Run)
 nmap <leader>rc <Action>(RunClass)
 nmap <leader>rm <Action>(ChooseRunConfiguration)
+nmap <leader>ar <Action>(ActivateRunToolWindow)
 
 " File structure
 nmap <leader>fs <Action>(FileStructurePopup)
